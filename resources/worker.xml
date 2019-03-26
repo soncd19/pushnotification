@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<workers>
+    <!--	<worker>
+            <name>Messenger Message</name>
+            <classname>com.snw.messenger.MessageConsumer</classname>
+            <topic>com.snw.objects.Message</topic>
+            <groupid>group01</groupid>
+            <serverAddr>10.2.22.140:9092</serverAddr>
+            <keyserializer>org.apache.kafka.common.serialization.StringSerializer</keyserializer>
+            <keydeserializer>org.apache.kafka.common.serialization.StringDeserializer</keydeserializer>
+            <valueserializer>com.snw.taskqueue.codec.serializer.ObjectSerializer</valueserializer>
+            <valuedeserializer>com.snw.taskqueue.codec.deserializer.ObjectDeserializer</valuedeserializer>
+        </worker>
+        <worker>
+            <name>Messenger Thread</name>
+            <classname>com.snw.messenger.ThreadConsumer</classname>
+            <topic>com.snw.objects.Thread</topic>
+            <groupid>group01</groupid>
+            <serverAddr>10.2.22.140:9092</serverAddr>
+            <keyserializer>org.apache.kafka.common.serialization.StringSerializer</keyserializer>
+            <keydeserializer>org.apache.kafka.common.serialization.StringDeserializer</keydeserializer>
+            <valueserializer>com.snw.taskqueue.codec.serializer.ObjectSerializer</valueserializer>
+            <valuedeserializer>com.snw.taskqueue.codec.deserializer.ObjectDeserializer</valuedeserializer>
+        </worker>
+        <worker>
+            <name>Messenger Presence</name>
+            <classname>com.snw.messenger.PresenceConsumer</classname>
+            <topic>mqtt_presence</topic>
+            <groupid>group01</groupid>
+            <serverAddr>10.2.22.140:9092</serverAddr>
+            <keyserializer>org.apache.kafka.common.serialization.StringSerializer</keyserializer>
+            <keydeserializer>org.apache.kafka.common.serialization.StringDeserializer</keydeserializer>
+            <valueserializer>org.apache.kafka.common.serialization.StringSerializer</valueserializer>
+            <valuedeserializer>org.apache.kafka.common.serialization.StringDeserializer</valuedeserializer>
+        </worker>
+
+        <worker>
+            <name>SSO Account</name>
+            <classname>com.snw.sso.AccountConsumer</classname>
+            <topic>com.snw.objects.Account</topic>
+            <groupid>group01</groupid>
+            <serverAddr>10.2.22.140:9092</serverAddr>
+            <keyserializer>org.apache.kafka.common.serialization.StringSerializer</keyserializer>
+            <keydeserializer>org.apache.kafka.common.serialization.StringDeserializer</keydeserializer>
+            <valueserializer>com.snw.taskqueue.codec.serializer.ObjectSerializer</valueserializer>
+            <valuedeserializer>com.snw.taskqueue.codec.deserializer.ObjectDeserializer</valuedeserializer>
+        </worker>-->
+
+    <!--<worker>
+        <name>SnwNotify</name>
+        <classname>com.bkav.notify.NotifyAppConsumer</classname>
+        <topic>com.snw.actions.data.EventData</topic>
+        <groupid>group01</groupid>
+        <serverAddr>10.2.22.140:9092</serverAddr>
+        <keyserializer>org.apache.kafka.common.serialization.StringSerializer</keyserializer>
+        <keydeserializer>org.apache.kafka.common.serialization.StringDeserializer</keydeserializer>
+        <valueserializer>com.snw.taskqueue.codec.serializer.ObjectSerializer</valueserializer>
+        <valuedeserializer>com.snw.taskqueue.codec.deserializer.ObjectDeserializer</valuedeserializer>
+    </worker>-->
+
+    <worker>
+        <name>SnwNotify_v2</name>
+        <classname>com.snw.notify.NotifyConsumer</classname>
+        <topic>com.snw.actions.data.EventData</topic>
+        <groupid>group01</groupid>
+        <serverAddr>10.2.22.140:9092</serverAddr>
+        <keyserializer>org.apache.kafka.common.serialization.StringSerializer</keyserializer>
+        <keydeserializer>org.apache.kafka.common.serialization.StringDeserializer</keydeserializer>
+        <valueserializer>com.snw.taskqueue.codec.serializer.ObjectSerializer</valueserializer>
+        <valuedeserializer>com.snw.taskqueue.codec.deserializer.ObjectDeserializer</valuedeserializer>
+    </worker>
+
+    <worker>
+        <name>SNWWorker</name>
+        <classname>bkav.attachment.AttachmentAppConsumer</classname>
+        <topic>java.lang.Long</topic>
+        <groupid>group01</groupid>
+        <serverAddr>10.2.22.140:9092</serverAddr>
+        <keyserializer>org.apache.kafka.common.serialization.StringSerializer</keyserializer>
+        <keydeserializer>org.apache.kafka.common.serialization.StringDeserializer</keydeserializer>
+        <valueserializer>com.snw.taskqueue.codec.serializer.ObjectSerializer</valueserializer>
+        <valuedeserializer>com.snw.taskqueue.codec.deserializer.ObjectDeserializer</valuedeserializer>
+    </worker>
+
+    <worker>
+        <name>SnwNotifyClientApp</name>
+        <classname>com.snw.notify.client.NotifyConsumerClient</classname>
+        <topic>com.snw.notify.data.NotifyTaskQueueData</topic>
+        <groupid>group01</groupid>
+        <serverAddr>10.2.22.140:9092</serverAddr>
+        <keyserializer>org.apache.kafka.common.serialization.StringSerializer</keyserializer>
+        <keydeserializer>org.apache.kafka.common.serialization.StringDeserializer</keydeserializer>
+        <valueserializer>com.snw.taskqueue.codec.serializer.ObjectSerializer</valueserializer>
+        <valuedeserializer>com.snw.taskqueue.codec.deserializer.ObjectDeserializer</valuedeserializer>
+    </worker>
+
+    <worker>
+        <name>SnwPushMessaging</name>
+        <classname>com.snw.push.PushMessagingConsumer</classname>
+        <topic>java.util.ArrayList</topic>
+        <groupid>group01</groupid>
+        <serverAddr>10.2.22.140:9092</serverAddr>
+        <keyserializer>org.apache.kafka.common.serialization.StringSerializer</keyserializer>
+        <keydeserializer>org.apache.kafka.common.serialization.StringDeserializer</keydeserializer>
+        <valueserializer>com.snw.taskqueue.codec.serializer.ObjectSerializer</valueserializer>
+        <valuedeserializer>com.snw.taskqueue.codec.deserializer.ObjectDeserializer</valuedeserializer>
+    </worker>
+
+    <!-- <worker>
+         <name>SNWSeverFile</name>
+         <classname>bkav.attachment.AttachmentFileServerConsumer</classname>
+         <topic>snwfileserver</topic>
+         <groupid>group01</groupid>
+         <serverAddr>10.2.22.140:9092</serverAddr>
+         <keyserializer>org.apache.kafka.common.serialization.StringSerializer</keyserializer>
+         <keydeserializer>org.apache.kafka.common.serialization.StringDeserializer</keydeserializer>
+         <valueserializer>org.apache.kafka.common.serialization.StringSerializer</valueserializer>
+         <valuedeserializer>org.apache.kafka.common.serialization.StringDeserializer</valuedeserializer>
+     </worker>-->
+</workers>
